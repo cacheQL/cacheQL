@@ -18,9 +18,9 @@ client.auth(redisAuth, function(err, response) {
 
 const cacheQL = {};
 
-cacheQL.cachify = (req, res, next) => {
+cacheQL.checkify = (req, res, next) => {
   // Checks the query if it is inside the cache
-  client.get(res.locals.query, function(err, response) {
+  client.get(req.body.query, function(err, response) { //should we have the developer specify to store it in req.body?
     if (err) {
       throw err;
     } else {
