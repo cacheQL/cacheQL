@@ -1,24 +1,35 @@
 const redis = require("redis");
 
-const redisHost = "redis-10212.c52.us-east-1-4.ec2.cloud.redislabs.com";
-const redisPort = process.argv[3] || 10212;
-const redisAuth = "eRQFVq70CXuDEoISTvKNVFtdevWabNbe";
+let redisHost;
+let redisPort;
+let redisAuth;
 
-const timeToLive = 30;
+let timeToLive;
 
-const client = redis.createClient({
-  port: redisPort,
-  host: redisHost
-});
-
-client.auth(redisAuth, function(err, response) {
-  if (err) {
-    throw err;
-  }
-  console.log("Client Authenticated");
-});
+let client;
 
 const cacheQL = {};
+
+cacheQL.set = data => {
+  if (data.redisHost) redisHost = data.redisHost;
+  if (data.redisPort) redisHost = data.redisPort;
+  if (data.redisAuth) redisHost = data.redisAuth;
+  if (data.timeToLive) redisHost = data.timeToLive;
+};
+
+cacheQL.auth = () => {
+  client = redis.createClient({
+    port: redisPort,
+    host: redisHost
+  });
+
+  client.auth(redisAuth, function(err, response) {
+    if (err) {
+      throw err;
+    }
+    console.log("Client Authenticated");
+  });
+};
 
 cacheQL.checkify = (req, res, next) => {
   // Checks the query if it is inside the cache
