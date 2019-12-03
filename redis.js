@@ -44,6 +44,25 @@ cacheQL.checkify = (req, res, next) => {
   });
 };
 
+
+cacheQL.cachify = (req, res, next) => {
+  //This is a case where the query doesn't exist in the database
+  //In the previous step the user must save the query and the querry response from the initial query to the db
+    //The query - res.locals.query
+    //The response of the query (querryResponse) - res.locals.queryResponse
+    const query = JSON.stringify(res.locals.query);
+    const queryResponse = JSON.stringify(res.locals.queryResponse)
+  client.SETEX(query, timeToLive, queryResponse, function(err,response){
+    if(err) {
+      throw err;
+    } else {
+      console.log('This is the response', response)
+      return next()
+    }
+  })
+};
+
+
 // const cachify = query => {
 //   client.get(query, function(err, response) {
 //     if (err) {
