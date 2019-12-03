@@ -12,9 +12,9 @@ const cacheQL = {};
 
 cacheQL.set = data => {
   if (data.redisHost) redisHost = data.redisHost;
-  if (data.redisPort) redisHost = data.redisPort;
-  if (data.redisAuth) redisHost = data.redisAuth;
-  if (data.timeToLive) redisHost = data.timeToLive;
+  if (data.redisPort) redisPort = data.redisPort;
+  if (data.redisAuth) redisAuth = data.redisAuth;
+  if (data.timeToLive) timeToLive = data.timeToLive;
 };
 
 cacheQL.auth = () => {
