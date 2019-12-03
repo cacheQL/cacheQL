@@ -4,6 +4,8 @@ const redisHost = "redis-10212.c52.us-east-1-4.ec2.cloud.redislabs.com";
 const redisPort = process.argv[3] || 10212;
 const redisAuth = "eRQFVq70CXuDEoISTvKNVFtdevWabNbe";
 
+const timeToLive = 30;
+
 const client = redis.createClient({
   port: redisPort,
   host: redisHost
@@ -20,17 +22,13 @@ const cacheQL = {};
 
 cacheQL.checkify = (req, res, next) => {
   // Checks the query if it is inside the cache
-  client.get(req.body.query, function(err, response) { //should we have the developer specify to store it in req.body?
+  client.get(req.body.query, function(err, response) {
+    //should we have the developer specify to store it in req.body?
     if (err) {
       throw err;
     } else {
       // The query is not inside the cache
       if (response === null) {
-        // Need to figure out how to go to db then go back here to save the query and result to cache
-        // Create another function
-        // Which will be called after the endpoint middleware (like database)
-        // Then call said function to check if cache is null
-        // If null then saves qeury and result in cache
         res.locals.cache = null;
       } else {
         // the query is in the cache
@@ -44,24 +42,28 @@ cacheQL.checkify = (req, res, next) => {
   });
 };
 
+// Need to figure out how to go to db then go back here to save the query and result to cache
+// Create another function (cachify)
+// Which will be called after the endpoint middleware (like database)
+// Then call said function to check if cache is null
+// If null then saves query and result in cache
 
 cacheQL.cachify = (req, res, next) => {
   //This is a case where the query doesn't exist in the database
   //In the previous step the user must save the query and the querry response from the initial query to the db
-    //The query - res.locals.query
-    //The response of the query (querryResponse) - res.locals.queryResponse
-    const query = JSON.stringify(res.locals.query);
-    const queryResponse = JSON.stringify(res.locals.queryResponse)
-  client.SETEX(query, timeToLive, queryResponse, function(err,response){
-    if(err) {
+  //The query - res.locals.query
+  //The response of the query (querryResponse) - res.locals.queryResponse
+  const query = JSON.stringify(res.locals.query);
+  const queryResponse = JSON.stringify(res.locals.queryResponse);
+  client.SETEX(query, timeToLive, queryResponse, function(err, response) {
+    if (err) {
       throw err;
     } else {
-      console.log('This is the response', response)
-      return next()
+      console.log("This is the response", response);
+      return next();
     }
-  })
+  });
 };
-
 
 // const cachify = query => {
 //   client.get(query, function(err, response) {
