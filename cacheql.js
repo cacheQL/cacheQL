@@ -71,17 +71,27 @@ cacheQL.cachify = (req, res, next) => {
   //In the previous step the user must save the query and the querry response from the initial query to the db
   //The query - req.body.query
   //The response of the query (queryResponse) - res.locals.queryResponse
-  const query = JSON.stringify(req.body.query);
-  const queryResponse = JSON.stringify(res.locals.queryResponse);
+  if (res.locals.cache === null) {
+    const query = req.body.query;
+    const queryResponse = res.locals.queryResponse;
 
-  client.SETEX(query, timeToLive, queryResponse, function(err, response) {
-    if (err) {
-      throw err;
-    } else {
-      console.log("This is the response", response);
-      return next();
-    }
-  });
+    // Stringifies the queryResponse to be able to save deeply nested objects in redis
+    client.SETEX(query, timeToLive, JSON.stringify(queryResponse), function(
+      err,
+      response
+    ) {
+      if (err) {
+        throw err;
+      } else {
+        res.locals.cache = JSON.parse(response);
+        return next();
+      }
+    });
+  }
+  // The query is in the cache and skips over cachify
+  else {
+    return next();
+  }
 };
 
 module.exports = cacheQL;
