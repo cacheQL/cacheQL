@@ -48,6 +48,7 @@ cacheQL.checkify = (req, res, next) => {
       // redis returns null if the key is not inside the redis database/cache
       if (response === null) {
         res.locals.cache = null;
+        return next();
       } else {
         // the query is in the cache
         // saves the result in cache variable in res.locals
@@ -83,7 +84,7 @@ cacheQL.cachify = (req, res, next) => {
       if (err) {
         throw err;
       } else {
-        res.locals.cache = JSON.parse(response);
+        res.locals.cache = queryResponse;
         return next();
       }
     });
