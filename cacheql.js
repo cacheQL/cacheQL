@@ -52,7 +52,8 @@ cacheQL.checkify = (req, res, next) => {
         // the query is in the cache
         // saves the result in cache variable in res.locals
         // to be accessible in the next middleware
-        res.locals.cache = response;
+        // Use JSON.parse because the response (value from redis) is saved using JSON stringify
+        res.locals.cache = JSON.parse(response);
         return next();
       }
     }
