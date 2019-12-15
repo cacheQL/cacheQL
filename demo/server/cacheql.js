@@ -1,5 +1,3 @@
-//REDIS NEW
-
 const redis = require("redis");
 
 let redisHost;
@@ -12,18 +10,12 @@ let client;
 
 const cacheQL = {};
 
-// Sets the redis database/cache configuration
-// User calls the set function and sends:
-// redisHost, redisPort, redisAuth, and/or timeToLive
-
 cacheQL.set = data => {
   if (data.redisHost) redisHost = data.redisHost;
   if (data.redisPort) redisPort = data.redisPort;
   if (data.redisAuth) redisAuth = data.redisAuth;
   if (data.timeToLive) timeToLive = data.timeToLive;
 };
-
-// Authenticates the redis configuration based on the information set by the user
 
 cacheQL.auth = () => {
   client = redis.createClient({
@@ -35,12 +27,13 @@ cacheQL.auth = () => {
     if (err) {
       throw err;
     }
-    console.log("Client Authenticated");
+    console.log("Redis Client Authenticated");
   });
 };
 
 cacheQL.checkify = (req, res, next) => {
   // Checks the query if it is inside the cache
+  console.log("checkify");
   client.GET(req.body.query, function(err, response) {
     // req.body.query is the graphql query from the frontend request
     if (err) {
