@@ -6,9 +6,13 @@ const graphqlHTTP = require("express-graphql");
 const graphql = require("graphql");
 
 const schema = require("./schema");
+<<<<<<< HEAD
 // const cacheQL = require("./cacheql");
 const cacheQL = require("../../cacheql")
 
+=======
+const cacheQL = require("./cacheql");
+>>>>>>> 8ea0726b8bf74de1d5b2bc0a0530ec9c2627a991
 const controller = require("./controller");
 
 const app = express();
