@@ -5,7 +5,7 @@ import React from "react";
 const TimeBox = props => {
   return (
     <div>
-      <h4>{props.noCacheTime}</h4>
+      <h1 className="miliseconds">{props.noCacheTime}</h1>
     </div>
   );
 };
@@ -13,7 +13,7 @@ const TimeBox = props => {
 const ResultBox = props => {
   return (
     <div>
-      <h1>{props.noCacheResult}</h1>
+      <h3 className="resultMessage">{props.noCacheResult}</h3>
     </div>
   );
 };
@@ -24,10 +24,10 @@ const NoCacheQL = props => {
       <h2>No CacheQL</h2>
       <ResultBox noCacheResult={props.noCacheResult} />
       <TimeBox noCacheTime={props.noCacheTime} />
-      <h3>
+      <p>
         These results are based on sending and retrieving non-cached data from a
         DB
-      </h3>
+      </p>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import React from "react";
 const TimeBox = props => {
   return (
     <div>
-      <h4>{props.cacheTime}</h4>
+      <h1 className="miliseconds">{props.cacheTime}</h1>
     </div>
   );
 };
@@ -13,7 +13,7 @@ const TimeBox = props => {
 const ResultBox = props => {
   return (
     <div>
-      <h1>{props.cacheResult}</h1>
+      <h3 className="resultMessage">{props.cacheResult}</h3>
     </div>
   );
 };
@@ -24,10 +24,10 @@ const CacheQL = props => {
       <h2>CacheQL</h2>
       <ResultBox cacheResult={props.cacheResult} />
       <TimeBox cacheTime={props.cacheTime} />
-      <h3>
+      <p>
         Here, we send the query through our custom middleware and see a speed
         improvement when our result is in the cache
-      </h3>
+      </p>
     </div>
   );
 };
