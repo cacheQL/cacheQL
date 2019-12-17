@@ -5,6 +5,11 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.cardActionsAreaButtons {
+  display: flex;
+  justify-content: space-around;
+}
+
 #github-icon{
   color: pink;
 }
@@ -42,19 +47,19 @@ body {
   border-radius: 5px;
   text-align: center;
   font-family: monospace;
-  padding-left: 15px;
-  padding-right: 15px;
+  font-size: 1em;
+  padding: 15px;
 }
 
+//Compare container - CacheQL and NoCacheQl boxes
 
+.miliseconds{
+  color: fuchsia
+}
 
-/* #header {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 28px;
-  align-items: baseline;
-} */
-
+.resultMessage {
+  color: darkcyan
+}
 
 .query-container {
   display: inline-block;
@@ -70,6 +75,7 @@ body {
   border-radius: 10px;
   text-align: center;
   font-family: monospace;
+  font-size: 1em;
 }
 
 /* .get-message-button{
