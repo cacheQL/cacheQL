@@ -4,7 +4,7 @@ import GitHubButton from 'react-github-btn'
 
 const Hero = () => {
   return (
-    <div className="particles">
+    <div>
 
       <div className="hero-content">
         <h1 className="hero-title">CacheQL</h1>
@@ -17,7 +17,7 @@ const Hero = () => {
         <GitHubButton className="hero-github-sponsor" href="https://github.com/cacheQL/cacheQL" data-icon="octicon-heart" data-size="large" aria-label="Sponsor @ntkme on GitHub">Sponsor</GitHubButton>
       </div>
 
-    <Particles 
+    <Particles  className="particles"
     params={{
 	    "particles": {
 	        "number": {
