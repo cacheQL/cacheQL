@@ -1,3 +1,5 @@
+//REDIS NEW
+
 const redis = require("redis");
 
 let redisHost;
