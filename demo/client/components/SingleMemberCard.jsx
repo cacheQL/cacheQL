@@ -9,9 +9,9 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
-  root: {
-      background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-  },
+  // root: {
+  //     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+  // },
   card: {
     maxWidth: 400,
   },
