@@ -18,12 +18,14 @@ const TopNavbar = () => {
 
     <div> 
       <Navbar bg="light" expand="lg">
-      <img src="/assets/logo.png" width="100" height="80" href="#home" alt="logo" class="d-inline-block align-top"/>
+      <img src="/assets/logo_transparent_2.png" width="100" height="80" href="#home" alt="logo" class="d-inline-block align-top"/>
       {/* <Navbar.Brand href="#home">CacheQL</Navbar.Brand> */}
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link href="#Team">Demo</Nav.Link>
+          <Nav.Link href="#Team">Download</Nav.Link>
           <Nav.Link href="#Team">Team</Nav.Link>
         </Nav>
         <Form inline>

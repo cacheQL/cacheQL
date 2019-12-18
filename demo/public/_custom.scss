@@ -54,7 +54,7 @@ body {
 //Compare container - CacheQL and NoCacheQl boxes
 
 .miliseconds{
-  color: fuchsia
+  color: F33287
 }
 
 .resultMessage {
@@ -92,10 +92,31 @@ body {
 
 } 
 
+//BAR SECTION
+
 .bar-container {
   display: inline-block;
   width: 91%;
   /* box-shadow: 10px 15px 39px rgba(0, 0, 0, 0.2); */
+}
+
+//TEAM SECTION
+#TeamBox {
+  background-color: #B6E2D3;
+  margin-bottom: 1em;
+  padding: 2em;
+}
+
+.MuiCardActions-root{
+  background-color:#FAE8E0;
+}
+
+.MuiButton-label {
+  color: gray
+}
+
+.MuiButton-label:hover {
+  color: #F33287
 }
 
 .query-container-title { 
@@ -109,5 +130,10 @@ background-color: white;
 border: 1px solid rgb(241, 173, 243);;
 }
 
+.particles {
+  height: 50%;
+}
 
-
+.hero-content{
+  padding-top: 100px;
+}
