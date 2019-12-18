@@ -90,9 +90,6 @@ const QueryContainer = props => {
         <br />
         <input type="submit" value="Get Message" className="get-message-button" onClick={props.queryGet} />
         <br/>
-        <input type="submit" value="Oowwee" className="oowwee" onClick={Easteregg}/>
-        <br />
-        <input type="submit" value="Acid" className="sandstorm" onClick={Sandstorm}/>
       </form>
     </div>
   );

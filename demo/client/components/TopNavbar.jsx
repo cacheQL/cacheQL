@@ -18,7 +18,7 @@ const TopNavbar = () => {
 
     <div> 
       <Navbar bg="light" expand="lg">
-      <img src="/assets/logo.png" width="100" height="80" href="#home" alt="logo" class="d-inline-block align-top"/>
+      <img src="/assets/logo_transparent_2.png" width="100" height="80" href="#home" alt="logo" class="d-inline-block align-top"/>
       {/* <Navbar.Brand href="#home">CacheQL</Navbar.Brand> */}
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
