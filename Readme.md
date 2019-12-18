@@ -1,6 +1,6 @@
 # CacheQL
 
-CacheQL is an open-source library for server-side caching GraphQL queries. This specific repository used Redis cache to test performance and fnuctionality, but can be incorporated with other caching mechanisms and databases.
+CacheQL is an open-source library for server-side caching GraphQL queries. This specific repository used a Redis cache to test performance and fnuctionality, but can be incorporated with other caching mechanisms and databases.
 
 ## Installation
 
