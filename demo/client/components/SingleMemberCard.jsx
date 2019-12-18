@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     maxWidth: 400,
   },
   media: {
-    height: 200,
+    height: 500,
   },
 });
 
@@ -32,7 +32,7 @@ function SingleMemberCard(props){
         />
         <CardContent className="cardStyle">
           <Typography gutterBottom variant="h5" component="h2">
-            {props.firstName}
+            {props.firstName} {props.lastName}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             {props.email}

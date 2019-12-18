@@ -10,9 +10,9 @@ const teamMembers = [
     title: 'Software Engineer',
     shortBio: 'Here is some short bio about myself',
     email: '',
-    gitHubLink: '',
+    gitHubLink: 'https://github.com/bmwoolf',
     linkedInLink: 'https://www.linkedin.com/in/bradley-woolf/',
-    avatar: '/assets/logo.png'
+    avatar: '/assets/bradley_woolf.jpg'
   },
   {
     firstName: 'Evan',
@@ -20,9 +20,9 @@ const teamMembers = [
     title: 'Software Engineer',
     shortBio: 'Here is some short bio about myself',
     email: '',
-    gitHubLink: '',
-    linkedInLink: '',
-    avatar: '/assets/logo.png',
+    gitHubLink: 'https://github.com/evank21',
+    linkedInLink: 'https://www.linkedin.com/in/evanking11/',
+    avatar: '/assets/evan_king.jpg',
   },
   {
     firstName: 'Joshua',
@@ -30,9 +30,9 @@ const teamMembers = [
     title: 'Software Engineer',
     shortBio: 'Here is some short bio about myself',
     email: '',
-    gitHubLink: '',
-    linkedInLink: '',
-    avatar: '/assets/logo.png',
+    gitHubLink: 'https://github.com/JoshuaManto',
+    linkedInLink: 'https://www.linkedin.com/in/joshuamanto/',
+    avatar: '/assets/joshua_manto.jpg',
   },
   {
     firstName: 'Kiril',
@@ -40,9 +40,9 @@ const teamMembers = [
     title: 'Software Engineer',
     shortBio: 'Here is some short bio about myself',
     email: '',
-    gitHubLink: '',
-    linkedInLink: '',
-    avatar: '/assets/logo.png',
+    gitHubLink: 'https://github.com/kirilchristov',
+    linkedInLink: 'https://www.linkedin.com/in/kchristov/',
+    avatar: '/assets/kiril_christov.jpg',
   },
 ]
 
@@ -65,7 +65,8 @@ function Team() {
           <Grid
           item
           //number of ROWS we want depending on the size
-          xs={12} sm={6} md={3} lg={3} xl={3}
+          xs={12} sm={3} md={3} lg={3} xl={3}
+          style={{justify:'center'}}
           >
             <SingleMemberCard
             key={member.firstName} 
