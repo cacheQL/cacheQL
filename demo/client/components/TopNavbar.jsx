@@ -24,6 +24,8 @@ const TopNavbar = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link href="#Team">Demo</Nav.Link>
+          <Nav.Link href="#Team">Download</Nav.Link>
           <Nav.Link href="#Team">Team</Nav.Link>
         </Nav>
         <Form inline>
