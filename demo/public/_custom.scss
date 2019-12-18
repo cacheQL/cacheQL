@@ -110,7 +110,11 @@ border: 1px solid rgb(241, 173, 243);;
 }
 
 .particles {
-  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .hero-content{
