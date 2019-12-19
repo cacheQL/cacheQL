@@ -1,10 +1,30 @@
 import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 function HowToUse() {
-  const greeting = 'How To Use CacheQL';
   return (
     <div id="howToUseBox">
-      <h1>{greeting}</h1>
+      <h1>Download</h1>
+      <section id='features'>
+            <figure>
+                <img src="https://picsum.photos/400/400" alt=''/>
+                {/* <ScrollAnimation animateIn="fadeInRight"> */}
+                <figcaption>npm install (put the line here that will be connected), make sure you have connected your Redis information in the server, and passed correct authentication in that field.</figcaption>
+                {/* </ScrollAnimation> */}
+            </figure>
+            <figure>
+                {/* <ScrollAnimation animateIn="fadeInLeft">    */}
+                <figcaption>need to incorporate checkify and all of its shit in here need to incorporate checkify and all of its shit in here</figcaption>
+                {/* </ScrollAnimation> */}
+                <img src="https://picsum.photos/400/400" alt='' />
+            </figure>
+            <figure>
+                <img src="https://picsum.photos/400/400" alt='' /> 
+                {/* <ScrollAnimation animateIn="fadeInRight"> */}
+                <figcaption>Need to put cachify and all its shit in here Need to put cachify and all its shit in here</figcaption>
+                {/* </ScrollAnimation> */}
+            </figure>
+        </section>
     </div>
   )
   
