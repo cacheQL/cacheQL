@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NoCacheQLBox from "../components/NoCacheQL";
 import CacheQLBox from "../components/CacheQL.jsx";
+import BarContainer from "./BarContainer.jsx";
 
 class CompareContainer extends Component {
   constructor(props) {

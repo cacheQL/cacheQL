@@ -15,7 +15,7 @@ const Hero = () => {
         </div>
       </div>
 
-    <Particles  className="particles"
+    <Particles className="particles"
     params={{
 	    "particles": {
 	        "number": {

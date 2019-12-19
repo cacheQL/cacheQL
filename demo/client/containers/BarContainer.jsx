@@ -40,7 +40,6 @@ class BarContainer extends Component {
     };
   }
 
-
   render() {
     return <Chart 
       options = {this.state.options}
