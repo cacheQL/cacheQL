@@ -76,8 +76,8 @@ cacheQL.checkify = (req, res, next) => {
 // If null then saves query and result in cache
 
 cacheQL.cachify = async (query, dbResult) => {
-  //This is a case where the query doesn't exist in the database
-  //In the previous step the user must save the query and the querry response from the initial query to the db
+  // This is a case where the query doesn't exist in the database
+  // In the previous step the user must save the query and the querry response from the initial query to the db
   // Stringifies the queryResponse to be able to save deeply nested objects in redis
 
   // console.log("cachify");
@@ -99,10 +99,18 @@ cacheQL.cachify = async (query, dbResult) => {
     } else {
       // Sets TTL for myHash key
       client.EXPIRE(myHash, timeToLive);
-      console.log("successful response in HSET: ", response);
+      // console.log("successful response in HSET: ", response);
       return await response;
     }
   });
+};
+
+const getQuery = query => {
+  const split = query.split("\n");
+  // console.log(split);
+  const myHash = split[1].trim();
+
+  return myHash;
 };
 
 module.exports = cacheQL;
