@@ -20,7 +20,7 @@ const TopNavbar = () => {
           height="80"
           href="#home"
           alt="logo"
-          class="d-inline-block align-top"
+          className="d-inline-block align-top"
         />
         {/* <Navbar.Brand href="#home">CacheQL</Navbar.Brand> */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -32,7 +32,7 @@ const TopNavbar = () => {
             <Nav.Link href="#Team">Team</Nav.Link>
           </Nav>
           <Form inline>
-            <a href="https://github.com" target="_blank">
+            <a href="https://github.com/cacheql/cacheql" target="_blank">
               <FontAwesomeIcon id="github-icon" icon={faGithub} size="3x" />
             </a>
           </Form>
