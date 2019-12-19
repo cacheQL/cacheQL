@@ -40,13 +40,12 @@ class BarContainer extends Component {
     };
   }
 
-
   render() {
     return <Chart 
       options = {this.state.options}
       series={this.props.series}
       type="bar"
-      height="18%"
+      height="5%"
       width="100%"
       className="bar-container"
     />

@@ -227,6 +227,9 @@ class MainContainer extends Component {
           nameGet={this.state.nameGet}
           nameGetHandler={this.nameGetChangeHandler}
           queryGet={this.queryGet}
+          series={this.state.series}
+          cacheTime={this.state.cacheTime}
+          noCacheTime={this.state.noCacheTime}
         />
         <CompareContainer
           cacheResult={this.state.cacheResult}

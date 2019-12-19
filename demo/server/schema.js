@@ -1,21 +1,25 @@
 const { buildSchema } = require("graphql");
 
-//capitalize operation type in schema
 const schema = buildSchema(`
-    type Query {
-        name: String!
-        message: String!
+  scalar myDate
 
-    }
+  type Query {
+    getAllPeople: [Person!]!
+    getPerson(name: String!): Person! 
+  }
 
-    type Mutation {
-        getMessage(name: String!, message: String!): Person
-    }
+  type Mutation {
+    addPerson(name: String!, age: Int!, birthdate: myDate!, position: String!): Person!
+  }
 
-    type Person {
-        name: String!
-        message: String!
-    }
+  type Person {
+    _id: ID!
+    name: String!
+    age: Int!
+    birthdate: myDate!
+    position: String!
+  }
+  
 `);
 
 module.exports = schema;
