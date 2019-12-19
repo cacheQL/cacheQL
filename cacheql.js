@@ -42,6 +42,7 @@ cacheQL.auth = () => {
       throw err;
     }
     console.log("Client Authenticated");
+    return true;
   });
 };
 
