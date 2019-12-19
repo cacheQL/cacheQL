@@ -75,32 +75,34 @@ cacheQL.checkify = (req, res, next) => {
 // Then call said function to check if cache is null
 // If null then saves query and result in cache
 
-cacheQL.cachify = (req, res, next) => {
+cacheQL.cachify = async (query, dbResult) => {
   //This is a case where the query doesn't exist in the database
   //In the previous step the user must save the query and the querry response from the initial query to the db
-  //The query - req.body.query
-  //The response of the query (queryResponse) - res.locals.queryResponse
-  if (res.locals.cache === null) {
-    const query = req.body.query;
-    const queryResponse = res.locals.queryResponse;
+  // Stringifies the queryResponse to be able to save deeply nested objects in redis
 
-    // Stringifies the queryResponse to be able to save deeply nested objects in redis
-    client.SETEX(query, timeToLive, JSON.stringify(queryResponse), function(
-      err,
-      response
-    ) {
-      if (err) {
-        throw err;
-      } else {
-        res.locals.cache = queryResponse;
-        return next();
-      }
-    });
-  }
-  // The query is in the cache and skips over cachify
-  else {
-    return next();
-  }
+  // console.log("cachify");
+  // console.log;
+  // console.log("in cachify: ", query);
+  // console.log("in cachify: ", dbResult);
+
+  // build object to be saved in cache
+  // myHash is the part of graphql query that wont change on similar queries
+  let myHash = getQuery(query);
+
+  // Saves myHash, whole graphql query, and stringified dbResult to Redis cache
+  client.HSET(myHash, query, JSON.stringify(dbResult), async function(
+    err,
+    response
+  ) {
+    if (err) {
+      throw err;
+    } else {
+      // Sets TTL for myHash key
+      client.EXPIRE(myHash, timeToLive);
+      console.log("successful response in HSET: ", response);
+      return await response;
+    }
+  });
 };
 
 module.exports = cacheQL;
