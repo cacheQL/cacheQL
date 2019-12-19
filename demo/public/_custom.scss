@@ -1,10 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:800&display=swap");
+
 body {
   text-align: center;
   background: #f0d0f0;
   // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
   //   Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-family: 'Yantramanav', sans-serif;
+  // font-family: "Yantramanav", sans-serif;
+  // font-family: "Raleway", sans-serif;
   font-weight: 100;
+  font-size: x-large;
 }
 
 .cardActionsAreaButtons {
@@ -12,7 +16,7 @@ body {
   justify-content: space-around;
 }
 
-#github-icon{
+#github-icon {
   color: pink;
 }
 
@@ -39,13 +43,12 @@ body {
   margin: 0 auto;
   /* padding: 10px; */
   box-shadow: 10px 15px 39px rgba(0, 0, 0, 0.2),
-  /* inset 0 0 0 4px #eee,
+    /* inset 0 0 0 4px #eee,
   inset 0 0 0 8px #ddd,
   inset 0 0 0 12px #ccc,
   inset 0 0 0 16px #bbb, */
-  /* inset 0 0 0 20px #aaa, */
-  inset 0 0 0 10px rgb(236, 236, 236),
-  inset 0 0 0 15px rgb(241, 173, 243);
+      /* inset 0 0 0 20px #aaa, */ inset 0 0 0 10px rgb(236, 236, 236),
+    inset 0 0 0 15px rgb(241, 173, 243);
   border-radius: 5px;
   text-align: center;
   font-family: monospace;
@@ -55,12 +58,12 @@ body {
 
 //Compare container - CacheQL and NoCacheQl boxes
 
-.miliseconds{
-  color: F33287
+.miliseconds {
+  color: F33287;
 }
 
 .resultMessage {
-  color: darkcyan
+  color: darkcyan;
 }
 
 .query-container {
@@ -72,8 +75,7 @@ body {
   margin: 30px 30px;
   background: rgb(255, 255, 255);
   box-shadow: 10px 15px 39px rgba(0, 0, 0, 0.2),
-    inset 0 0 0 10px rgb(245, 245, 245),
-    inset 0 0 0 15px rgb(241, 173, 243);
+    inset 0 0 0 10px rgb(245, 245, 245), inset 0 0 0 15px rgb(241, 173, 243);
   border-radius: 10px;
   text-align: center;
   font-family: monospace;
@@ -85,14 +87,13 @@ body {
 } */
 
 .bg-light {
-  background-color: white !important
+  background-color: white !important;
 }
 
-.oowwee{
+.oowwee {
   /* position: fixed; */
   z-index: 2147483638;
-
-} 
+}
 
 //BAR SECTION
 
@@ -109,25 +110,25 @@ body {
   padding: 2em;
 }
 
-.MuiCardActions-root{
-  background-color:#FAE8E0;
+.MuiCardActions-root {
+  background-color: #fae8e0;
 }
 
 .MuiButton-label {
-  color: gray
+  color: gray;
 }
 
 .MuiButton-label:hover {
-  color: #F33287
+  color: #f33287;
 }
 
-.query-container-title { 
+.query-container-title {
   font-size: 16;
 }
 
 //HOW TO USE COMPONENT
 
-#howToUseBox{
+#howToUseBox {
   background-color: white;
   border: 1px solid rgb(241, 173, 243);
   color: rgb(49, 49, 49);
@@ -141,11 +142,11 @@ body {
   width: 100%;
 }
 
-.hero-content{
+.hero-content {
   padding-top: 100px;
 }
 
-.hero-title{
+.hero-title {
   color: rgb(49, 49, 49);
   margin-top: 170px;
   font-size: 80px;
@@ -158,7 +159,7 @@ body {
   // margin-bottom: 30px;
 }
 
-.github-buttons{
+.github-buttons {
   margin-top: 40px;
   margin-bottom: 150px;
 }
