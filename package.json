@@ -4,12 +4,15 @@
   "description": "",
   "main": "redis.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "jest"
   },
   "author": "Bradley Woolf, Evan King, Joshua Manto, and Kiril Christov",
   "license": "ISC",
   "dependencies": {
     "@material-ui/core": "^4.8.0",
     "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
   }
 }
