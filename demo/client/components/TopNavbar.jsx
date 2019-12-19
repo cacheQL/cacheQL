@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import NavLink from 'react-bootstrap/NavLink'
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import { Link as LinkScroll, animateScroll } from "react-scroll";
@@ -27,6 +28,7 @@ const TopNavbar = () => {
           height="80"
           href="#home"
           alt="logo"
+          id="logoImage"
           className="d-inline-block align-top"
         />
         {/* <Navbar.Brand href="#home">CacheQL</Navbar.Brand> */}
@@ -34,18 +36,18 @@ const TopNavbar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto" style={navStyle}>
             <div className="navItems">
-              <LinkScroll to="github-icon" smooth={true} offset={-64}>
+              <NavLink><LinkScroll to="github-icon" smooth={true} offset={-64}>
                 Home
-              </LinkScroll>
-              <LinkScroll to="query-container" smooth={true} offset={-64}>
+              </LinkScroll></NavLink>
+              <NavLink><LinkScroll to="query-container" smooth={true} offset={-64}>
                 Demo
-              </LinkScroll>
-              <LinkScroll to="download" smooth={true} offset={-64}>
+              </LinkScroll></NavLink>
+              <NavLink><LinkScroll to="download" smooth={true} offset={-64}>
                 Download
-              </LinkScroll>
-              <LinkScroll to="TeamBox" smooth={true} offset={-64}>
+              </LinkScroll></NavLink>
+              <NavLink><LinkScroll to="TeamBox" smooth={true} offset={-64}>
                 Team
-              </LinkScroll>
+              </LinkScroll></NavLink>
             </div>
           </Nav>
           <Form inline>
