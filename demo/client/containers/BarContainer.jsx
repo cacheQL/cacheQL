@@ -41,14 +41,16 @@ class BarContainer extends Component {
   }
 
   render() {
-    return <Chart 
-      options = {this.state.options}
-      series={this.props.series}
-      type="bar"
-      height="5%"
-      width="100%"
-      className="bar-container"
-    />
+    return (
+      <Chart
+        options={this.state.options}
+        series={this.props.series}
+        type="bar"
+        height="8%"
+        width="100%"
+        className="bar-container"
+      />
+    );
   }
 }
 
