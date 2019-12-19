@@ -130,6 +130,33 @@ cacheQL.queryFields = query => {
   return childArr;
 };
 
+const constructQueryChildrenObject = query => {
+  query = JSON.stringify(query);
+  let childObj = {};
+  let splitQ = query.split("\\n");
+  console.log("splitQ ", splitQ);
+
+  splitQ.forEach((ele, index, array) => {
+    if (index > 1) {
+      // if there is only one variable in the query
+      if (array[index - 1].includes("{") && array[index + 1].includes("}")) {
+        let pushThis = ele.trim();
+        // array[index - 1].replace(" {", "").trim() + "." + ele.trim();
+        console.log("PUSH THIS", pushThis);
+        // childArr.push(pushThis.trim());
+        childObj[pushThis.trim()] = pushThis.trim();
+      }
+      // if the current element is a
+      else if (!ele.includes("{") && !ele.includes("}") && ele.trim() != "") {
+        console.log("ELEMENT: ", ele.trim());
+        // childArr.push(ele.trim());
+        childObj[ele.trim()] = ele.trim();
+      }
+    }
+  });
+  return childObj;
+};
+
 const getQuery = query => {
   const split = query.split("\n");
   // console.log(split);
