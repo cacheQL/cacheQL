@@ -116,6 +116,18 @@ cacheQL.checkify = async (query, partial = false) => {
       // if partial fields are in cache then partial fields need to be taken from the end point
       // then combined which will be final result
       //
+
+      // Checks if resultObj is empty
+      // This means the initial part of the query is the same
+      // But no fields in the queries in the cache are the same with the graphql query from the client
+      // Returns null to activate endpoint call afterwards
+      if (
+        Object.entries(resultObj).length === 0 &&
+        resultObj.constructor === Object
+      ) {
+        return null;
+      }
+
       return resultObj;
     });
   } else {
@@ -132,6 +144,7 @@ cacheQL.checkify = async (query, partial = false) => {
         return JSON.parse(response);
       }
     });
+    return hgetResult;
   }
 };
 
