@@ -11,7 +11,7 @@ const resolvers = {
   },
 
   getPerson: async (args, root) => {
-    // console.log("in get person");
+    console.log("in get person");
     // console.log(args);
     // console.log(root.body.query);
     const query = root.body.query;
