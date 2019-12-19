@@ -33,11 +33,6 @@ app.get("/", (req, res) => {
 
 app.use(
   "/graphql",
-  (req, res, next) => {
-    console.log("in here SERVER");
-    console.log(req.body);
-    return next();
-  },
   graphqlHTTP({
     schema: schema,
     rootValue: resolvers,
