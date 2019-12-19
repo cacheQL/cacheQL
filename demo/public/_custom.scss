@@ -23,7 +23,8 @@ body {
 .hero {
   padding-top: 10vh;
   background-color: ivory;
-  height: 40vh;
+  height: 25vh;
+
 }
 
 .compareContainer {
@@ -31,6 +32,7 @@ body {
   justify-content: center;
   margin-bottom: 30px;
   height: 35%;
+
 }
 
 .infoBox {
@@ -50,10 +52,10 @@ body {
       /* inset 0 0 0 20px #aaa, */ inset 0 0 0 10px rgb(236, 236, 236),
     inset 0 0 0 15px rgb(241, 173, 243);
   border-radius: 5px;
-  text-align: center;
-  font-family: monospace;
+  text-align: left;
+  // font-family: monospace;
   font-size: 1em;
-  padding: 15px;
+  padding: 5% 5%;
 }
 
 //Compare container - CacheQL and NoCacheQl boxes
@@ -77,9 +79,20 @@ body {
   box-shadow: 10px 15px 39px rgba(0, 0, 0, 0.2),
     inset 0 0 0 10px rgb(245, 245, 245), inset 0 0 0 15px rgb(241, 173, 243);
   border-radius: 10px;
-  text-align: center;
-  font-family: monospace;
+  text-align: left;
+  // font-family: monospace;
   font-size: 1em;
+}
+
+.query-container textarea {
+height: 5vh;
+width:80%
+}
+
+.inputBox {
+  width: 35vw;
+  height: 5vh;
+  margin-bottom: 5px;
 }
 
 /* .get-message-button{
@@ -140,6 +153,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
+  z-index: -1;
 }
 
 .hero-content {
