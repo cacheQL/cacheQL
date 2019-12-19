@@ -55,22 +55,24 @@ const QueryContainer = props => {
 
   return (
     <div className="query-container">
-      <h4 className="query-container-title">Query</h4>
+      <h1>Try with a GraphQL query</h1>
       <form className="message-send">
-        Name:{" "}
+      {/* Put a query here */}
+       {" "}
         <input
           type="text"
-          className="fname"
-          placeholder="Name"
+          className="inputBox"
+          placeholder="Put a query here"
           value={props.name}
           onChange={props.nameHandler}
         />
         <br />
-        Message:{" "}
+        {/* Message */}
+       {" "}
         <input
           type="text"
-          className="lname"
-          placeholder="Message"
+          className="inputBox"
+          placeholder="Insert some value"
           value={props.message}
           onChange={props.messageHandler}
         />
@@ -79,11 +81,12 @@ const QueryContainer = props => {
       </form>
 
       <form className="message-get">
-        Name:{" "}
+      {/* Your query */}
+        {" "}
         <input
           type="text"
-          className="fname"
-          placeholder="Name"
+          className="inputBox"
+          placeholder="Your querry again"
           value={props.nameGet}
           onChange={props.nameGetHandler}
         />
