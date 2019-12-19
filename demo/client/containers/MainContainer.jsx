@@ -2,12 +2,11 @@ import React, { Component } from "react";
 import QueryContainer from "./QueryContainer.jsx";
 import CompareContainer from "./CompareContainer.jsx";
 import BarContainer from "./BarContainer.jsx";
-import Hero from "../components/Hero.jsx"
-import HowToUse from '../components/HowToUse'
-import Team from '../components/Team'
-import Footer from './Footer'
-
-
+import Hero from "../components/Hero.jsx";
+import HowToUse from "../components/HowToUse";
+import Team from "../components/Team";
+import Footer from "./Footer";
+import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
 
 import axios from "axios";
 
@@ -140,7 +139,6 @@ class MainContainer extends Component {
             }
           ]
         });
-
       })
       .catch(err => {
         console.log("error axios");
@@ -189,7 +187,6 @@ class MainContainer extends Component {
             }
           ]
         });
-  
       })
       .catch(err => {
         console.log("error axios");
@@ -245,6 +242,9 @@ class MainContainer extends Component {
         <HowToUse />
         <Team />
         <Footer />
+        <div>
+          <ScrollUpButton />
+        </div>
       </React.Fragment>
     );
   }
