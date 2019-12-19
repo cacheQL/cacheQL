@@ -6,6 +6,7 @@ const QueryContainer = props => {
 
   return (
     <div className="query-container">
+      <div className="query-inputs">
       <h1>Try with a GraphQL query</h1>
       <form className="message-send">
       {/* Put a query here */}
@@ -45,6 +46,10 @@ const QueryContainer = props => {
         <input type="submit" value="Get Message" className="get-message-button" onClick={props.queryGet} />
         <br/>
       </form>
+      </div>
+      <div className="example-picture">
+        <img className="actual-example-picture" src="/assets/query_example.png"></img>
+      </div>
     </div>
   );
 };
