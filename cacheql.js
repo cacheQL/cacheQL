@@ -105,6 +105,31 @@ cacheQL.cachify = async (query, dbResult) => {
   });
 };
 
+cacheQL.queryFields = query => {
+  query = JSON.stringify(query);
+  let childArr = [];
+  let splitQ = query.split("\\n");
+  console.log("splitQ ", splitQ);
+
+  splitQ.forEach((ele, index, array) => {
+    if (index > 1) {
+      // if there is only one variable in the query
+      if (array[index - 1].includes("{") && array[index + 1].includes("}")) {
+        let pushThis = ele.trim();
+        // array[index - 1].replace(" {", "").trim() + "." + ele.trim();
+        console.log("PUSH THIS", pushThis);
+        childArr.push(pushThis.trim());
+      }
+      // if the current element is a
+      else if (!ele.includes("{") && !ele.includes("}") && ele.trim() != "") {
+        console.log("ELEMENT: ", ele.trim());
+        childArr.push(ele.trim());
+      }
+    }
+  });
+  return childArr;
+};
+
 const getQuery = query => {
   const split = query.split("\n");
   // console.log(split);
