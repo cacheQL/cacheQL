@@ -102,7 +102,7 @@ body {
 
 //TEAM SECTION
 #TeamBox {
-  background-color: #B6E2D3;
+  background-color: #f0d0f0;
   margin-bottom: 1em;
   padding: 2em;
 }
@@ -131,9 +131,36 @@ border: 1px solid rgb(241, 173, 243);;
 }
 
 .particles {
-  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .hero-content{
   padding-top: 100px;
+}
+
+.hero-title{
+  color: rgb(51, 51, 51);
+  margin-bottom: 50px;
+}
+
+.hero-description {
+  color: rgb(87, 87, 87);
+  margin-bottom: 30px;
+}
+
+
+.hero-github-follow{
+  
+}
+
+.hero-github-star{
+  
+}
+
+.hero-github-sponsor{
+
 }
