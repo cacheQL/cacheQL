@@ -1,8 +1,10 @@
 body {
   text-align: center;
   background: #f0d0f0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  //   Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: 100;
 }
 
 .cardActionsAreaButtons {
@@ -126,8 +128,9 @@ body {
 //HOW TO USE COMPONENT
 
 #howToUseBox{
-background-color: white;
-border: 1px solid rgb(241, 173, 243);;
+  background-color: white;
+  border: 1px solid rgb(241, 173, 243);
+  color: rgb(49, 49, 49);
 }
 
 .particles {
@@ -143,24 +146,38 @@ border: 1px solid rgb(241, 173, 243);;
 }
 
 .hero-title{
-  color: rgb(51, 51, 51);
-  margin-bottom: 50px;
+  color: rgb(49, 49, 49);
+  margin-top: 170px;
+  font-size: 80px;
+  z-index: 1000;
 }
 
 .hero-description {
   color: rgb(87, 87, 87);
-  margin-bottom: 30px;
+  margin-top: 180px;
+  // margin-bottom: 30px;
 }
 
-
-.hero-github-follow{
-  
+.github-buttons{
+  margin-top: 40px;
+  margin-bottom: 150px;
 }
 
-.hero-github-star{
-  
+#features figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  color: rgb(87, 87, 87);
 }
 
-.hero-github-sponsor{
+#features figcaption {
+  padding: 40px;
+}
 
+#howToUseBox {
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
