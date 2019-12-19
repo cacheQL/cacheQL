@@ -1,6 +1,7 @@
 //REDIS NEW
 
 const redis = require("redis");
+const { promisify } = require("util");
 
 let redisHost;
 let redisPort;
@@ -9,6 +10,8 @@ let redisAuth;
 let timeToLive;
 
 let client;
+let hgetAsync;
+let hgetallAsync;
 
 const cacheQL = {};
 
@@ -30,6 +33,9 @@ cacheQL.auth = () => {
     port: redisPort,
     host: redisHost
   });
+
+  hgetAsync = promisify(client.hget).bind(client);
+  hgetAllAsync = promisify(client.hgetall).bind(client);
 
   client.auth(redisAuth, function(err, response) {
     if (err) {
