@@ -1,11 +1,12 @@
 const express = require("express");
-const logger = require('morgan')
+const logger = require("morgan");
 const bodyParser = require("body-parser");
 const path = require("path");
 const graphqlHTTP = require("express-graphql");
 const graphql = require("graphql");
 
 const schema = require("./schema");
+const resolvers = require("./resolver");
 const cacheQL = require("./cacheql");
 const controller = require("./controller");
 
@@ -13,7 +14,7 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.json());
-app.use(logger('dev'));
+app.use(logger("dev"));
 app.use(bodyParser.json());
 
 const cacheQLData = {
@@ -29,6 +30,15 @@ cacheQL.auth();
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/index.html"));
 });
+
+app.use(
+  "/graphql",
+  graphqlHTTP({
+    schema: schema,
+    rootValue: resolvers,
+    graphiql: true
+  })
+);
 
 app.post("/addPerson", controller.addPerson, (req, res) => {
   res.status(200).send("Added");
