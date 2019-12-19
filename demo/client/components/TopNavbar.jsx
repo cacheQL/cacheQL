@@ -1,42 +1,64 @@
-import React from 'react';
-import ReactDOM from 'react-dom'
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl';
+import React from "react";
+import ReactDOM from "react-dom";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import NavLink from 'react-bootstrap/NavLink'
+import Form from "react-bootstrap/Form";
+import FormControl from "react-bootstrap/FormControl";
+import { Link as LinkScroll, animateScroll } from "react-scroll";
 
 //font awesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { relative } from "path";
 
-
+let navStyle = {
+  width: "30%",
+  position: relative
+};
 
 const TopNavbar = () => {
-
-    return ( 
-
-    <div> 
+  return (
+    <div>
       <Navbar bg="light" expand="lg">
-      <img src="/assets/logo_transparent_2.png" width="90" height="80" href="#home" alt="logo" class="d-inline-block align-top"/>
-      {/* <Navbar.Brand href="#home">CacheQL</Navbar.Brand> */}
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#Team">Demo</Nav.Link>
-          <Nav.Link href="#Team">Download</Nav.Link>
-          <Nav.Link href="#Team">Team</Nav.Link>
-        </Nav>
-        <Form inline>
-        <a href="https://github.com" target="_blank">
-          <FontAwesomeIcon id="github-icon" icon={faGithub}  size="3x"/> 
-        </a>
-        </Form>
-      </Navbar.Collapse>
-    </Navbar> 
+        <img
+          src="/assets/logo_transparent_2.png"
+          width="90"
+          height="80"
+          href="#home"
+          alt="logo"
+          id="logoImage"
+          className="d-inline-block align-top"
+        />
+        {/* <Navbar.Brand href="#home">CacheQL</Navbar.Brand> */}
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto" style={navStyle}>
+            <div className="navItems">
+              <NavLink><LinkScroll to="github-icon" smooth={true} offset={-64}>
+                Home
+              </LinkScroll></NavLink>
+              <NavLink><LinkScroll to="query-container" smooth={true} offset={-64}>
+                Demo
+              </LinkScroll></NavLink>
+              <NavLink><LinkScroll to="download" smooth={true} offset={-64}>
+                Download
+              </LinkScroll></NavLink>
+              <NavLink><LinkScroll to="TeamBox" smooth={true} offset={-64}>
+                Team
+              </LinkScroll></NavLink>
+            </div>
+          </Nav>
+          <Form inline>
+            <a href="https://github.com/cacheql/cacheql" target="_blank">
+              <FontAwesomeIcon id="github-icon" icon={faGithub} size="3x" />
+            </a>
+          </Form>
+        </Navbar.Collapse>
+      </Navbar>
     </div>
-    );
-}
+  );
+};
 
 export default TopNavbar;
