@@ -9,7 +9,6 @@
   "author": "Bradley Woolf, Evan King, Joshua Manto, and Kiril Christov",
   "license": "ISC",
   "dependencies": {
-    "@material-ui/core": "^4.8.0",
     "redis": "^2.8.0"
   },
   "devDependencies": {
