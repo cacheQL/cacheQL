@@ -13,6 +13,7 @@ function Footer() {
           width="109px"
           height="20px"
         ></iframe>
+        <span>Tweet us at </span>
         <a
           href="https://twitter.com/cache_ql"
           className="twitter-follow-button"
@@ -22,7 +23,6 @@ function Footer() {
           @Cache_QL
         </a>
       </span>
-      <span>2019</span>
     </div>
   );
 }

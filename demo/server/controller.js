@@ -1,17 +1,16 @@
-const { test } = require("./model.js");
+const { Person } = require("./model.js");
 
 const controller = {};
 
 controller.addPerson = (req, res, next) => {
-   //-----------------------------------------------add start timer here
+  //-----------------------------------------------add start timer here
   console.log("add person controller");
   console.log(req.body.name);
   console.log(req.body.message);
 
   const { name, message } = req.body;
 
-  test
-    .create({ name, message })
+  Person.create({ name, message })
     .then(result => {
       console.log("added");
       console.log(result);
@@ -45,7 +44,7 @@ controller.getPerson = (req, res, next) => {
   if (res.locals.cache === null) {
     // console.log("in db");
     // console.log(req.body.name);
-    test.findOne({ name: req.body.query }).then(result => {
+    Person.findOne({ name: req.body.query }).then(result => {
       // console.log("db with cache");
       // console.log(result);
 
@@ -64,7 +63,8 @@ controller.getPerson = (req, res, next) => {
 
 controller.getPersonDB = (req, res, next) => {
   console.log("in db");
-  test.findOne({ name: req.body.query }).then(result => {
+  console.log(req.body.fields);
+  Person.findOne({ name: req.body.query }, req.body.fields).then(result => {
     console.log("db");
     console.log(result);
 
@@ -72,7 +72,7 @@ controller.getPersonDB = (req, res, next) => {
       message: result.message
     };
 
-    res.locals.queryResponse = response;
+    res.locals.queryResponse = result;
 
     return next();
   });
