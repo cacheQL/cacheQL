@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import NavLink from 'react-bootstrap/NavLink'
+import NavLink from "react-bootstrap/NavLink";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import { Link as LinkScroll, animateScroll } from "react-scroll";
@@ -36,24 +36,32 @@ const TopNavbar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto" style={navStyle}>
             <div className="navItems">
-              <NavLink><LinkScroll to="github-icon" smooth={true} offset={-64}>
-                Home
-              </LinkScroll></NavLink>
-              <NavLink><LinkScroll to="query-container" smooth={true} offset={-64}>
-                Demo
-              </LinkScroll></NavLink>
-              <NavLink><LinkScroll to="download" smooth={true} offset={-64}>
-                Download
-              </LinkScroll></NavLink>
-              <NavLink><LinkScroll to="TeamBox" smooth={true} offset={-64}>
-                Team
-              </LinkScroll></NavLink>
+              <NavLink>
+                <LinkScroll to="github-icon" smooth={true} offset={-64}>
+                  Home
+                </LinkScroll>
+              </NavLink>
+              <NavLink>
+                <LinkScroll to="query-container" smooth={true} offset={-64}>
+                  Demo
+                </LinkScroll>
+              </NavLink>
+              <NavLink>
+                <LinkScroll to="download" smooth={true} offset={-64}>
+                  Download
+                </LinkScroll>
+              </NavLink>
+              <NavLink>
+                <LinkScroll to="TeamBox" smooth={true} offset={-64}>
+                  Team
+                </LinkScroll>
+              </NavLink>
             </div>
           </Nav>
           <Form inline>
-            <a href="https://github.com/cacheql/cacheql" target="_blank">
+            {/* <a href="https://github.com/cacheql/cacheql" target="_blank">
               <FontAwesomeIcon id="github-icon" icon={faGithub} size="3x" />
-            </a>
+            </a> */}
           </Form>
         </Navbar.Collapse>
       </Navbar>
