@@ -15,14 +15,45 @@ npm install cacheql
 ## Usage
 
 ```javascript
+
+// Require in CacheQL 
 const cacheQL = require('cacheql') 
 
-// inside of resolvers
-cacheql.checkify('word') # returns 'words'
-cacheql.cachify('goose') # returns 'geese'
-cacheql.singularize('phenomena') # returns 'phenomenon'
-```
+obj.getPerson = async (args, root) => {
 
+    // Checkify will check the Redis cache
+    const query = root.body.query;
+    const checkify = await cacheQL.checkify(query, true);
+    
+    // Not in the redis cache
+    if (!checkify) {
+    // Extract the fields with queryFields
+
+      const fields = cacheQL.queryFields(query);
+      
+      let fieldsObj = {};
+
+      for (let i = 0; i < fields.length; i++) {
+        fieldsObj[fields[i]] = 1;
+      }
+    
+    // Depends on the specific database that the developer decides to use
+      const fromDB = await Person.findOne({ name: args.name }, fieldsObj)
+        .populate()
+        .exec();
+    
+    // Store the resposne in the cache on the way back to the client
+      const cachifyResponse = await cacheQL.cachify(query, fromDB);
+      return fromDB;
+    }
+
+    // The query response is in the redis cache, so return it from there
+    else {
+      return checkify;
+    }
+  }
+
+```
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
