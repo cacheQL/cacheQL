@@ -66,7 +66,7 @@ function Team() {
           {teamMembers.map( member => 
               <Grid
               item
-              xs={12} sm={6} md={3} lg={3} xl={3}
+              xs={12} sm={12} md={3} lg={3} xl={3}
               >
                 <SingleMemberCard
                 key={member.firstName} 

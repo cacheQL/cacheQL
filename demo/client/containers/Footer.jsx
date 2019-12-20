@@ -1,10 +1,29 @@
-import React from 'react';
+import React from "react";
 
 function Footer() {
   return (
-    <div id="FooterBox">
-      <h1>This is the Footer box</h1>
+    <div className="Footer">
+      <span>
+        <iframe
+          className="github-btn"
+          src="https://ghbtns.com/github-btn.html?user=cacheql&repo=cacheql&type=watch&count=true"
+          allowtransparency="true"
+          frameBorder="0"
+          scrolling="0"
+          width="109px"
+          height="20px"
+        ></iframe>
+        <span>Tweet us at </span>
+        <a
+          href="https://twitter.com/cache_ql"
+          className="twitter-follow-button"
+          data-show-count="true"
+          data-lang="en"
+        >
+          @Cache_QL
+        </a>
+      </span>
     </div>
-  ) 
+  );
 }
 export default Footer;
