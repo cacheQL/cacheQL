@@ -16,6 +16,29 @@ npm install cacheql
 
 ```javascript
 
+cacheQL.auth = () => {
+  client = redis.createClient({
+    port: redisPort,
+    host: redisHost
+  });
+
+  hgetAsync = promisify(client.hget).bind(client);
+  hgetAllAsync = promisify(client.hgetall).bind(client);
+
+  client.auth(redisAuth, function(err, response) {
+    if (err) {
+      throw err;
+    }
+    console.log("Client Authenticated");
+    return true;
+  });
+};
+
+```
+
+
+```javascript
+
 // Require in CacheQL 
 const cacheQL = require('cacheql') 
 
@@ -23,12 +46,14 @@ obj.getPerson = async (args, root) => {
 
     // Checkify will check the Redis cache
     const query = root.body.query;
+
+    // The second parameter in checkify it to enable/disable partial field detection
     const checkify = await cacheQL.checkify(query, true);
     
     // Not in the redis cache
     if (!checkify) {
-    // Extract the fields with queryFields
 
+    // Extract the fields with queryFields
       const fields = cacheQL.queryFields(query);
       
       let fieldsObj = {};
