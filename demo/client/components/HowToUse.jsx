@@ -8,32 +8,22 @@ function HowToUse() {
       <h1>Download</h1>
       <section id="download">
         <figure>
-          <img src="https://picsum.photos/400/400" alt="image" />
-          <ScrollAnimation animateIn="fadeInRight">
+          <img src="/assets/Screen Shot 2019-12-19 at 6.17.05 PM.png" alt="image" height="400"/>
+          {/* <ScrollAnimation animateIn="fadeInRight"> */}
             <figcaption>
-              npm install (put the line here that will be connected), make sure
+              How to incorporate the cachQL library in your project. The specs will chagne depending on the database that the developer decides to use.
+            </figcaption>
+          {/* </ScrollAnimation> */}
+        </figure>
+        <figure className="fadeInLeft">
+          {/* <ScrollAnimation animateIn="fadeInLeft" > */}
+            <figcaption>
+            Npm install, make sure
               you have connected your Redis information in the server, and
-              passed correct authentication in that field.
+              passed correct authentication in that field. 
             </figcaption>
-          </ScrollAnimation>
-        </figure>
-        <figure>
-          <ScrollAnimation animateIn="fadeInLeft">
-            <figcaption>
-              need to incorporate checkify and all of its shit in here need to
-              incorporate checkify and all of its shit in here
-            </figcaption>
-          </ScrollAnimation>
-          <img src="https://picsum.photos/400/400" alt="image" />
-        </figure>
-        <figure>
-          <img src="https://picsum.photos/400/400" alt="image" />
-          <ScrollAnimation animateIn="fadeInRight">
-            <figcaption>
-              Need to put cachify and all its shit in here Need to put cachify
-              and all its shit in here
-            </figcaption>
-          </ScrollAnimation>
+          {/* </ScrollAnimation> */}
+          <img src="/assets/Screen Shot 2019-12-19 at 6.13.34 PM.png" alt="image" height="400"/>
         </figure>
       </section>
     </div>
