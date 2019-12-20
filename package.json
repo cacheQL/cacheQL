@@ -4,8 +4,7 @@
   "description": "",
   "main": "redis.js",
   "scripts": {
-    // "test": "jest",
-    // "test:coverage": "jest --coverage"
+    "test": ""
   },
   "author": "Bradley Woolf, Evan King, Joshua Manto, and Kiril Christov",
   "license": "ISC",
