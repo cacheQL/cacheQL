@@ -7,12 +7,9 @@ body {
   font-size: x-large;
 }
 
-
-.main-container{
+.main-container {
   display: flex;
-
 }
-
 
 .cardActionsAreaButtons {
   display: flex;
@@ -31,7 +28,7 @@ body {
 
 .compareContainer {
   display: flex;
-  flex-flow:wrap;
+  flex-flow: wrap;
   justify-content: center;
 }
 
@@ -50,8 +47,7 @@ body {
   max-width: 40%;
   min-width: 400px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2),
-    inset 0 0 0 10px rgb(236, 236, 236),
-    inset 0 0 0 15px rgb(241, 173, 243);
+    inset 0 0 0 10px rgb(236, 236, 236), inset 0 0 0 15px rgb(241, 173, 243);
   border-radius: 5px;
   text-align: left;
   // font-family: monospace;
@@ -200,23 +196,40 @@ body {
   padding-top: 40px;
 }
 
-.query-container{
+.Footer {
+  padding: 1.5rem 1.5rem;
+  background: rgb(47, 5, 22);
+  color: white;
+  font-size: 1.05em;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.twitter-follow-button {
+  color: pink;
+}
+
+.twitter-follow-button:hover {
+  color: white;
+}
+
+.query-container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.query-inputs{
+.query-inputs {
   width: 50%;
   // height: 100%;
 }
 
-.example-picture{
+.example-picture {
   width: auto;
   // padding-left: 10px;
 }
 
-.actual-example-picture{
+.actual-example-picture {
   width: 100%;
   // height: 100%;
 }
