@@ -9,9 +9,9 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="div-around-topNavBar">
       <TopNavbar />
-        <div>
+        <div className="div-around-MainContainer">
           <MainContainer className="main-container"/>
         </div>
       </div>

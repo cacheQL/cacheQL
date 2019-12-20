@@ -3,6 +3,7 @@ import React from "react";
 const QueryContainer = props => {
   return (
     <div className="query-container">
+      <div className="query-inputs">
       <h1>Try with a GraphQL query</h1>
       {/* <form className="message-send"> */}
       {/* Put a query here */}
@@ -84,6 +85,10 @@ const QueryContainer = props => {
         />
         <br />
       </form>
+      </div>
+      <div className="example-picture">
+        <img className="actual-example-picture" src="/assets/query_example.png"></img>
+      </div>
     </div>
   );
 };

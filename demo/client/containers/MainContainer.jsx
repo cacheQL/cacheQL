@@ -2,25 +2,11 @@ import React, { Component } from "react";
 import QueryContainer from "./QueryContainer.jsx";
 import CompareContainer from "./CompareContainer.jsx";
 import BarContainer from "./BarContainer.jsx";
-<<<<<<< HEAD
-import Hero from "../components/Hero.jsx";
-import HowToUse from "../components/HowToUse";
-import Team from "../components/Team";
-import Footer from "./Footer";
-||||||| merged common ancestors
-import Hero from "../components/Hero.jsx"
-import HowToUse from '../components/HowToUse'
-import Team from '../components/Team'
-import Footer from './Footer'
-
-
-=======
 import Hero from "../components/Hero.jsx";
 import HowToUse from "../components/HowToUse";
 import Team from "../components/Team";
 import Footer from "./Footer";
 import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
->>>>>>> a8438e4b104a8db1df11f3042b45c62c3cb5f212
 
 import axios from "axios";
 
