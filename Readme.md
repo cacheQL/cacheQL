@@ -6,7 +6,7 @@ CacheQL is in beta. The founding team is actively working on new features to opt
 
 ## Installation
 
-Use the package manager [npm](https://www.npmjs.com/) to install foobar.
+Use the package manager [npm](https://www.npmjs.com/) to install CacheQL.
 
 ```bash
 npm install cacheql
@@ -35,7 +35,7 @@ cacheQL.auth = () => {
 };
 
 ```
-
+Connect to your specific Redis cache, and follow our code to set it up! Redis functions have issues with async, so we wrapped them in promisify, a method in the native 'util' library.
 
 ```javascript
 
@@ -79,6 +79,9 @@ obj.getPerson = async (args, root) => {
   }
 
 ```
+
+Checkify will be run, then queryFields (for partial field validation), then cachify will store the response in the database on its way back to the user. The developer has an option to turn on partial query validation by specifying true/false as the second parameter in queryFields.
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
