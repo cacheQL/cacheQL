@@ -24,6 +24,9 @@ cacheQL.set = data => {
   if (data.redisPort) redisPort = data.redisPort;
   if (data.redisAuth) redisAuth = data.redisAuth;
   if (data.timeToLive) timeToLive = data.timeToLive;
+  if (data.redisHost && data.redisPort && data.redisAuth && data.timeToLive) {
+    return true;
+  };
 };
 
 // Authenticates the redis configuration based on the information set by the user
