@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const graphqlHTTP = require("express-graphql");
 const graphql = require("graphql");
+const credentials = require("./credentials");
 
 const schema = require("./schema");
 const resolvers = require("./resolver");
@@ -18,9 +19,9 @@ app.use(logger("dev"));
 app.use(bodyParser.json());
 
 const cacheQLData = {
-  redisHost: "redis-10212.c52.us-east-1-4.ec2.cloud.redislabs.com",
-  redisPort: 10212,
-  redisAuth: "eRQFVq70CXuDEoISTvKNVFtdevWabNbe",
+  redisHost: credentials.redisHost,
+  redisPort: credentials.redisPort,
+  redisAuth: credentials.redisAuth,
   timeToLive: 300
 };
 
