@@ -45,9 +45,9 @@ const Hero = () => {
         params={{
           particles: {
             number: {
-              value: 800,
+              value: 500,
               density: {
-                enable: false
+                enable: true
               }
             },
             size: {

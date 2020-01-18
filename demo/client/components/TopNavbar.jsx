@@ -23,7 +23,7 @@ const TopNavbar = () => {
     <div>
       <Navbar bg="light" expand="lg">
         <img
-          src="/assets/logo_transparent_2.png"
+          src="/assets/cqlogo.png"
           width="90"
           height="80"
           href="#home"
