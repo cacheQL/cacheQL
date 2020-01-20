@@ -92,7 +92,7 @@ body {
 .inputBox {
   width: 35vw;
   height: 5vh;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
 }
 
 /* .get-message-button{
@@ -172,7 +172,7 @@ body {
 
 .hero-description {
   color: rgb(255, 255, 255);
-  margin-top: 160px;
+  margin-top: 100px;
   // margin-bottom: 30px;
   font-family: Raleway;
   text-shadow: 2px 2px rgb(198, 25, 221);
@@ -228,7 +228,6 @@ body {
 .query-inputs {
   width: 50%;
   color: rgb(0, 0, 0);
-  font-family: Raleway;
   // text-shadow: 2px 2px rgb(198, 25, 221);
   // height: 100%;
 }
@@ -240,6 +239,7 @@ body {
 
 .actual-example-picture {
   width: 100%;
+  margin-left: 10px;
   // height: 100%;
 }
 
