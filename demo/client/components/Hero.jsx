@@ -37,6 +37,17 @@ const Hero = () => {
           >
             Sponsor
           </GitHubButton>
+          <div id="arrow-wrapper">
+            <div class="arrow-border">
+              <div class="arrow down"></div>
+              <div class="pulse"></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 className="hero-description">
+            Test CacheQL's performance with this GraphQL query!
+          </h3>
         </div>
       </div>
 
@@ -45,7 +56,7 @@ const Hero = () => {
         params={{
           particles: {
             number: {
-              value: 500,
+              value: 0,
               density: {
                 enable: true
               }
