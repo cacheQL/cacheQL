@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:800&display=swap");
-@import url("https://fonts.googleapis.com/css?family=ABeeZee&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
 body {
   text-align: center;
   background: #f0d0f0;
   font-weight: 100;
   font-size: x-large;
+  font-family: Lato;
 }
 
 .main-container {
@@ -66,6 +67,14 @@ body {
 .resultMessage {
   color: darkcyan;
   word-wrap: break-word;
+}
+
+.query-description {
+  color: rgb(255, 255, 255);
+  margin-top: 100px;
+  // margin-bottom: 30px;
+  font-family: Raleway;
+  text-shadow: 2px 2px rgb(198, 25, 221);
 }
 
 .query-container {
@@ -252,7 +261,7 @@ body {
   height: 60px;
   display: block;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 .arrow-border {
   position: relative;
