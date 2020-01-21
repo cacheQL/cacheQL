@@ -3,3 +3,4 @@ build/*.js
 npm-debug.log
 .DS_Store
 debug.log
+server/credentials.js
