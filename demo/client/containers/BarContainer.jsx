@@ -14,10 +14,10 @@ class BarContainer extends Component {
           foreColor: "#333"
         },
         xaxis: {
-          categories: ["cacheTime", "noCacheTime"]
+          categories: ["CacheQL", "Without CacheQL"]
         },
         title: {
-          text: "CacheQL vs No Cache query",
+          text: "Query Response Time With CacheQL vs Without CacheQL",
           align: "center",
           margin: 20,
           offsetY: 20,
