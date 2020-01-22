@@ -8,22 +8,32 @@ function HowToUse() {
       <h1>Download</h1>
       <section id="download">
         <figure>
-          <img src="/assets/Screen Shot 2019-12-19 at 6.17.05 PM.png" alt="image" height="400"/>
+          <img
+            src="/assets/Screen Shot 2019-12-19 at 6.17.05 PM.png"
+            alt="image"
+            height="400"
+          />
           {/* <ScrollAnimation animateIn="fadeInRight"> */}
-            <figcaption>
-              How to incorporate the cachQL library in your project. The specs will chagne depending on the database that the developer decides to use.
-            </figcaption>
+          <figcaption>
+            See screenshot on how to incorporate the CacheQL library into your
+            project. The specs will change depending on the database you decide
+            to use.
+          </figcaption>
           {/* </ScrollAnimation> */}
         </figure>
         <figure className="fadeInLeft">
           {/* <ScrollAnimation animateIn="fadeInLeft" > */}
-            <figcaption>
-            Npm install, make sure
-              you have connected your Redis information in the server, and
-              passed correct authentication in that field. 
-            </figcaption>
+          <figcaption>
+            Use 'npm install cacheql', make sure you have plugged in your valid
+            Redis credentials (port, host) on your server via the specified
+            format, and you're ready to go!
+          </figcaption>
           {/* </ScrollAnimation> */}
-          <img src="/assets/Screen Shot 2019-12-19 at 6.13.34 PM.png" alt="image" height="400"/>
+          <img
+            src="/assets/Screen Shot 2019-12-19 at 6.13.34 PM.png"
+            alt="image"
+            height="400"
+          />
         </figure>
       </section>
     </div>

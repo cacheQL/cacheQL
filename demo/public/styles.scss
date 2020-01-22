@@ -1,4 +1,9 @@
-
 @import "~bootstrap/scss/bootstrap";
 @import "custom";
 
+#pulse *,
+#arrow-wrapper * {
+  -webkit-box-sizing: initial;
+  -moz-box-sizing: initial;
+  box-sizing: content-box;
+}

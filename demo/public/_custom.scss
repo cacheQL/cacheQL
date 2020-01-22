@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
 body {
   text-align: center;
   background: #f0d0f0;
   font-weight: 100;
   font-size: x-large;
+  font-family: Lato;
 }
 
 .main-container {
@@ -64,6 +66,15 @@ body {
 
 .resultMessage {
   color: darkcyan;
+  word-wrap: break-word;
+}
+
+.query-description {
+  color: rgb(255, 255, 255);
+  margin-top: 100px;
+  // margin-bottom: 30px;
+  font-family: Raleway;
+  text-shadow: 2px 2px rgb(198, 25, 221);
 }
 
 .query-container {
@@ -90,7 +101,7 @@ body {
 .inputBox {
   width: 35vw;
   height: 5vh;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
 }
 
 /* .get-message-button{
@@ -156,20 +167,24 @@ body {
 }
 
 .hero-content {
-  padding-top: 100px;
+  padding-top: 20px;
 }
 
 .hero-title {
-  color: rgb(49, 49, 49);
   margin-top: 170px;
   font-size: 80px;
   z-index: 1000;
+  color: rgb(255, 255, 255);
+  font-family: Raleway;
+  text-shadow: 2px 2px rgb(198, 25, 221);
 }
 
 .hero-description {
-  color: rgb(87, 87, 87);
-  margin-top: 180px;
+  color: rgb(255, 255, 255);
+  margin-top: 100px;
   // margin-bottom: 30px;
+  font-family: Raleway;
+  text-shadow: 2px 2px rgb(198, 25, 221);
 }
 
 .github-buttons {
@@ -221,6 +236,8 @@ body {
 
 .query-inputs {
   width: 50%;
+  color: rgb(0, 0, 0);
+  // text-shadow: 2px 2px rgb(198, 25, 221);
   // height: 100%;
 }
 
@@ -231,9 +248,69 @@ body {
 
 .actual-example-picture {
   width: 100%;
+  margin-left: 10px;
   // height: 100%;
 }
 
-.fadeInLeft{
+.fadeInLeft {
   padding-top: 20px;
+}
+
+#arrow-wrapper {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+.arrow-border {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+}
+.arrow {
+  position: absolute;
+  bottom: 24px;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid rgb(255, 255, 255);
+  border-right: 3px solid rgb(255, 255, 255);
+  right: 19px;
+}
+
+.pulse {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  margin: 0;
+  animation: pulsate 2s ease-out;
+  animation-iteration-count: infinite;
+  opacity: 0;
+  box-shadow: 0 0 1px 2px #ffffff;
+  animation-delay: 2s;
+}
+
+.down {
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.9, 0.9);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.3, 1.3);
+    opacity: 0;
+  }
 }

@@ -25,8 +25,8 @@ const CacheQL = props => {
       <ResultBox cacheResult={props.cacheResult} />
       <TimeBox cacheTime={props.cacheTime} />
       <p>
-        Here, we send the query through our custom middleware and see a speed
-        improvement when our result is in the cache
+        Query is sent through custom middleware and cached result leads to
+        improved speed.
       </p>
     </div>
   );

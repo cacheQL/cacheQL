@@ -1,6 +1,8 @@
 import React from "react";
 import Particles from "react-particles-js";
 import GitHubButton from "react-github-btn";
+import NavLink from "react-bootstrap/NavLink";
+import { Link as LinkScroll, animateScroll } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -37,6 +39,22 @@ const Hero = () => {
           >
             Sponsor
           </GitHubButton>
+
+          <div id="arrow-wrapper">
+            <NavLink>
+              <LinkScroll to="query-description" smooth={true} offset={-64}>
+                <div class="arrow-border">
+                  <div class="arrow down"></div>
+                  <div class="pulse"></div>
+                </div>
+              </LinkScroll>
+            </NavLink>
+          </div>
+        </div>
+        <div>
+          <h3 className="query-description">
+            Test CacheQL's performance with this GraphQL query!
+          </h3>
         </div>
       </div>
 
@@ -45,9 +63,9 @@ const Hero = () => {
         params={{
           particles: {
             number: {
-              value: 80,
+              value: 0,
               density: {
-                enable: false
+                enable: true
               }
             },
             size: {
